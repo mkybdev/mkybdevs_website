@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'sf';
+  src: url('font/SFUIDisplay-Medium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sf';
+  src: url('font/SFUIDisplay-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sf';
+  src: url('font/SFUIDisplay-Light.ttf');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+/*@font-face {
+  font-family: 'sf';
+  src: url('font/SFUIDisplay-Medium.otf');
+  font-weight: bold;
+  font-style: normal;
+}*/
+
+@font-face {
+  font-family: 'sfr';
+  src: url('font/SF-Compact-Rounded-Medium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'sf', 'Noto Sans JP', sans-serif;
+  height: 85vh;
+  position: relative;
+}
+
+.frame {
+  position: absolute;
+  width: 100vw;
+  height: 85vh;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  z-index: 1000;
+  text-align: center;
+  pointer-events: none;
+}
+
+.fr {
+  width: 85vw;
+  height: 85vh;
+}
+
+#box {
+  position: absolute;
+  width: 82vw;
+  height: 84.9vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 0;
+  /*background-image: url(lockwp.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;*/
+  color: white;
+  z-index: 100;
+}
+
+#lwp {
+  position: absolute;
+  width: 82vw;
+  height: 84.9vh;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/*
+.lwpactive {
+  animation: blr 0.25s ease forwards;
+}
+
+.lwpactiver {
+  animation: blrr 0.5s ease forwards;
+}
+*/
+@keyframes blr {
+  100% {
+    filter: blur(10px);
+    /*opacity: 0.95;*/
+  }
+}
+
+@keyframes blrr {
+  100% {
+    filter: blur(0);
+    /*opacity: 1;*/
+  }
+}
+
+#box .status {
+  z-index: 200;
+}
+
+.status {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70vw;
+  overflow: hidden;
+  padding: 3.75vh 6vw 2vh 6vw;
+  letter-spacing: 0.1em;
+}
+
+#hstatus {
+  opacity: 0;
+}
+
+#career {
+  font-size: 2.5vw;
+  float: left;
+  font-weight: bold;
+}
+
+#ind {
+  font-size: 2.75vw;
+  float: right;
+  padding-right: 0;
+}
+
+#ind i {
+  padding: 0 0.075em;
+}
+
+#lock {
+  text-align: center;
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 37.5vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#lock i {
+  font-size: 10vw;
+}
+
+#clock {
+  padding-top: 1vh;
+  font-size: 17.5vw;
+  font-weight: lighter;
+}
+
+#date {
+  font-size: 5vw;
+  font-weight: lighter;
+}
+
+#credit {
+  padding-top: 1vh;
+  display: flex;
+  font-size: 3vw;
+  font-weight: lighter;
+  align-items: center;
+  justify-content: center;
+}
+
+#stu {
+  position: absolute;
+  bottom: 3.5vh;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+#navibar {
+  position: absolute;
+  bottom: 3vh;
+  width: 50vmin;
+  height: 0.75vh;
+  text-align: center;
+  left: calc(50% - 25vmin);
+  border-radius: 10px;
+  background-color: white;
+}
+
+#home {
+  position: absolute;
+  width: 82vw;
+  height: 84.9vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 0;
+  background-image: url(wp.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  z-index: 10;
+}
+
+#time {
+  font-size: 2.75vw;
+  float: left;
+  font-weight: bold;
+}
+
+#time i {
+  margin-left: 1vw;
+  vertical-align: text-top;
+}
+
+
+.appswrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 5vw;
+  position: absolute;
+  width: 56vw;
+  height: auto;
+  padding: 2vw 3vw 0 3vw;
+  text-align: center;
+  left: calc(50% - 31vw);
+  opacity: 0;
+  z-index: 15;
+}
+
+#uapps {
+  padding: 0 3vw 0 3vw;
+}
+
+.active {
+  animation: appanime forwards 0.75s 1 cubic-bezier(0, 1.06, 0, 1) normal;
+}
+
+.uactive {
+  animation: uappanime forwards 0.75s 1 cubic-bezier(0, 1.06, 0, 1) normal;
+}
+
+@keyframes appanime {
+  0% {
+    top: -400vh;
+    opacity: 1;
+    width: 800vw;
+    height: auto;
+    left: calc(50% - 404vw);
+  }
+
+  /*50% {
+    width: 100vw;
+    height: 100vh;
+    left: calc(50% - 54vw);
+  }*/
+
+  100% {
+    top: 7.5vh;
+    opacity: 1;
+    width: 56vw;
+    height: auto;
+    left: calc(50% - 31vw);
+  }
+}
+
+@keyframes uappanime {
+  0% {
+    top: 150vh;
+    opacity: 1;
+    width: 400vw;
+    height: auto;
+    left: calc(50% - 204vw);
+  }
+
+  /*50% {
+    width: 100vw;
+    height: 100vh;
+    left: calc(50% - 54vw);
+  }*/
+
+  100% {
+    /*top: 7.5vh;*/
+    opacity: 1;
+    width: 56vw;
+    height: auto;
+    left: calc(50% - 31vw);
+  }
+}
+
+#popblur {
+  position: absolute;
+  width: 82vw;
+  height: 84.9vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  z-index: 300;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popblurback {
+  animation: popbluranime backwards 0.2s 1 cubic-bezier(.03, 1.13, .69, .97) normal;
+}
+
+.popbluractive {
+  animation: popbluranime forwards 0.2s 1 cubic-bezier(.03, 1.13, .69, .97) normal;
+}
+
+@keyframes popbluranime {
+  100% {
+    opacity: 1;
+  }
+}
+
+#popup {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 5vw;
+  position: absolute;
+  width: 56vw;
+  height: auto;
+  padding: 2vw 3vw 0 3vw;
+  text-align: center;
+  left: calc(50% - 31vw);
+  top: 7.5vh;
+  width: 56vw;
+  height: auto;
+  left: calc(50% - 31vw);
+  z-index: 400;
+  pointer-events: none;
+}
+
+#popapp1 {
+  visibility: hidden;
+}
+
+#popapp2 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  visibility: hidden;
+}
+
+.popactive2 {
+  animation: popappanime2 forwards 0.5s 1 cubic-bezier(.03, 1.13, .69, .97) normal;
+}
+
+.popactive1 {
+  animation: popappanime1 forwards 0.5s 1 cubic-bezier(.03, 1.13, .69, .97) normal;
+}
+
+.popback2 {
+  animation: popbackappanime2 forwards 2s 1 cubic-bezier(.03, 1.13, .69, .97) normal;
+}
+
+.popback1 {
+  animation: popbackappanime1 forwards 2s 1 cubic-bezier(.03, 1.13, .69, .97) normal;
+}
+
+@keyframes popappanime1 {
+  100% {
+    /*grid-template-columns: 1fr;*/
+    top: 14vh;
+    width: 200vw;
+    height: auto;
+    left: calc(50% - 34.75vw);
+  }
+}
+
+@keyframes popappanime2 {
+  100% {
+    /*grid-template-columns: 1fr;*/
+    top: calc(-60vw + 10vh);
+    width: 200vw;
+    height: auto;
+    left: calc(50% - 34.75vw);
+  }
+}
+
+@keyframes popbackappanime1 {
+  100% {
+    top: 7.5vh;
+    width: 56vw;
+    height: auto;
+    left: calc(50% - 31vw);
+    visibility: hidden;
+  }
+}
+
+@keyframes popbackappanime2 {
+  100% {
+    top: 7.5vh;
+    width: 56vw;
+    height: auto;
+    left: calc(50% - 31vw);
+    visibility: hidden;
+  }
+}
+
+.folder::before {
+  position: absolute;
+  content: '';
+  display: block;
+  background: inherit;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.folder {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 25;
+}
+
+.folder {
+  border-radius: 30px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vw;
+  padding: 1.5vw;
+  text-align: center;
+}
+
+.folderapp {
+  border-radius: 10px;
+  aspect-ratio: 1 / 1;
+  z-index: 30;
+  padding: auto 0;
+}
+
+.appicon {
+  border-radius: 30px;
+  aspect-ratio: 1 / 1;
+}
+
+.folderappicon {
+  width: 70%;
+  margin: 7.5% 15% 0 15%;
+  border-radius: 30px;
+  aspect-ratio: 1 / 1;
+}
+
+.appdsc {
+  font-size: 2.5vw;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  padding: 0.5vw 0 2vw 0;
+}
+
+.folderappdsc {
+  font-size: 2.5vw;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  padding: 0.5vw 0 0 0;
+}
+
+#appclock {
+  grid-row: 1/3;
+  grid-column: 2/4;
+}
+
+#appclocki::before {
+  position: absolute;
+  content: '';
+  display: block;
+  background: inherit;
+  background-color: rgba(0, 0, 0, .6);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+#appclocki {
+  position: relative;
+  /*background-color: rgba(0, 0, 0, .9);*/
+  z-index: 25;
+}
+
+#clockapp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+}
+
+#apphatenai {
+  background-image: url(hatena.svg);
+  background-color: white;
+  background-size: cover;
+}
+
+#appspotifyi {
+  background-image: url(spotifyi.png);
+  background-size: cover;
+}
+
+#appmaili {
+  background-image: url(mail.svg);
+  background-size: cover;
+}
+
+#appamazoni {
+  background-image: url(amazon.svg);
+  background-size: cover;
+}
+
+#folderappcrbrpsi,
+#folderappcrbrps {
+  background-image: url(crab.png);
+  background-size: cover;
+  z-index: 1000;
+}
+
+#folderappblog1i,
+#folderappblog1 {
+  background-color: white;
+  background-image: url(No_Entry.png);
+  background-size: cover;
+  z-index: 1000;
+}
+
+#dock {
+  position: absolute;
+  bottom: -50vh;
+  width: 64vw;
+  height: auto;
+  text-align: center;
+  left: calc(50% - 32vw);
+  border-radius: 60px;
+}
+
+#dockcontent {
+  border-radius: 60px;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 5vw;
+  padding: 4vw 4vw;
+  position: relative;
+  z-index: 25;
+}
+
+#dockcontent::before {
+  border-radius: 60px;
+  position: absolute;
+  content: '';
+  display: block;
+  z-index: 20;
+  background: inherit;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.hidedock {
+  position: absolute;
+  bottom: -10vh;
+}
+
+.dockapp {
+  z-index: 30;
+  border-radius: 30px;
+  aspect-ratio: 1 / 1;
+}
+
+#docktwitter {
+  color: white;
+  background-color: #1d9bf0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8.5vw;
+}
+
+#dockyoutube {
+  background-color: #ffffff;
+  color: #da1725;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8.5vw;
+}
+
+#dockgithub {
+  background-color: #000000;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 0%, transparent 50%, transparent 50%, rgba(0, 0, 0, .1) 100%);
+  background-image: linear-gradient(rgba(255, 255, 255, .2) 0%, transparent 50%, transparent 50%, rgba(0, 0, 0, .1) 100%);
+  /*box-shadow: 0 2px 2px 0 rgba(255, 255, 255, .1) inset, 0 2px 10px 0 rgba(255, 255, 255, .2) inset, 0 -2px 2px 0 rgba(0, 0, 0, .1) inset;*/
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8.75vw;
+}
+
+/*
+#appinstai {
+  background: -webkit-linear-gradient(135deg, #7e0bfd -40%, #f13f79 50%) no-repeat;
+  background: linear-gradient(135deg, #7e0bfd -40%, #f13f79 50%) no-repeat;
+  overflow: hidden;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11vw;
+  position: relative;
+}
+
+#appinstai::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: -30%;
+  width: 120%;
+  height: 120%;
+  background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+}
+
+#appinstai i {
+  z-index: 20;
+}
+*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  margin: 15% auto;
+  width: 50%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+  border-radius: 10px 10px 10px 10px;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.modal-header h1 {
+  margin: 1rem 0;
+}
+
+.modal-header {
+  background: lightblue;
+  padding: 3px 15px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  color: black;
+  border-radius: 0 0 10px 10px;
+}

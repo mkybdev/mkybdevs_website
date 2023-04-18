@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="viewport" content="user-scalable=no" />
+
+  <title>mkybdev's Website</title>
+  <meta name="description" content="Welcome to mkybdev's Website!" />
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- jQuery UI -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script type="text/javascript" src="jquery.ui.touch-punch.min.js"></script>
+  <script src="jquery.throwable.js"></script>
+  <script src="sp.js"></script>
+  <link rel="stylesheet" href="sp.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <link rel="shortcut icon" href="logo.ico" />
+  <link rel="apple-touch-icon-precomposed" href="logo.ico" />
+</head>
+
+<body>
+  <div class="frame"><img src="framew.png" class="fr"></div>
+  <div id="box">
+    <img src="wp.jpg" id="lwp">
+    <div class="status">
+      <div id="career">mkybdev</div>
+      <div id="ind">
+        <i class="bi bi-reception-4"></i>
+        <i class="fa-solid fa-wifi"></i>
+        <i class="fa-solid fa-battery-full"></i>
+      </div>
+    </div>
+    <div id="lock">
+      <i class="bi bi-unlock-fill"></i>
+      <div id="clock"></div>
+      <div id="date"></div>
+      <div id="credit">壁紙提供 :&nbsp;<u id="crediturl">スマラン</u></div>
+    </div>
+    <div id="stu">上にスワイプして開く</div>
+    <div id="navibar"></div>
+  </div>
+  <div id="home">
+    <div class="status" id="hstatus">
+      <div id="time"></div>
+      <div id="ind">
+        <i class="bi bi-reception-4"></i>
+        <i class="fa-solid fa-wifi"></i>
+        <i class="fa-solid fa-battery-full"></i>
+      </div>
+    </div>
+    <div id="apps" class="appswrap">
+      <div class="app" id="app1" onclick="popup(0)">
+        <div class="folder" id="folderworks">
+          <div class="folderapp" id="folderappcrbrps"></div>
+        </div>
+        <p class="appdsc" id="app1d">Works</p>
+      </div>
+      <div class="app" id="app2" onclick="popup(1)">
+        <div class="folder" id="folderblog">
+          <div class="folderapp" id="folderappblog1"></div>
+        </div>
+        <p class="appdsc" id="app2d">Blog</p>
+      </div>
+      <div class="app" id="appspotify">
+        <div class="appicon" id="appspotifyi"></div>
+        <p class="appdsc" id="appspotifyd">Spotify</p>
+      </div>
+      <div class="app" id="apphatena">
+        <div class="appicon" id="apphatenai"></div>
+        <p class="appdsc" id="apphatenad">はてブ</p>
+      </div>
+      <div class="app" id="appmail">
+        <div class="appicon" id="appmaili"></div>
+        <p class="appdsc" id="appmaild">メール</p>
+      </div>
+      <div class="app" id="appclock">
+        <div class="appicon" id="appclocki">
+          <canvas id="clockapp" width="" height=""></canvas>
+        </div>
+        <p class="appdsc" id="appclockd">時計</p>
+      </div>
+    </div>
+    <div id="uapps" class="appswrap">
+      <div class="app" id="appamazon">
+        <div class="appicon" id="appamazoni"></div>
+        <p class="appdsc" id="appamazond">Amazon</p>
+      </div>
+    </div>
+    <div id="popblur" onclick="popback()"></div>
+    <div id="popup">
+      <div class="app" id="popapp1">
+        <p class="appdsc" id="popapp1d">Works</p>
+        <div class="folder" id="popfolderworks">
+          <div class="folderapp" id="popfolderappcrbrps">
+            <div class="folderappicon" id="folderappcrbrpsi"></div>
+            <p class="folderappdsc" id="folderappcrbrpsd">カニじゃんけん</p>
+          </div>
+        </div>
+      </div>
+      <div class="app" id="popapp2">
+        <p class="appdsc" id="popapp2d">Blog</p>
+        <div class="folder" id="popfolderblog">
+          <div class="folderapp" id="popfolderappblog1">
+            <div class="folderappicon" id="folderappblog1i"></div>
+            <p class="folderappdsc" id="folderappblog1d">記事がありません</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="dock">
+      <div id="dockcontent">
+        <div class="dockapp" id="docktwitter">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <div class="dockapp" id="dockyoutube">
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="dockapp" id="dockgithub">
+          <i class="fa-brands fa-github"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="rotmodal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>横画面にしないでください</h1>
+      </div>
+      <div class="modal-body">
+        <p>このページは縦画面でのみ表示できます。</p>
+        <p>画面を縦向きに戻してください。</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  function mediaCheck() {
+    let ua = window.navigator.userAgent;
+    if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 || ua.indexOf('iPad') > 0){
+      if (window.orientation != 0) {
+        const modal = document.getElementById('rotmodal');
+        modal.style.display = 'block';
+      }
+    } else {
+      location.href = "https://mkybdev.com";
+    }
+    document.addEventListener("dblclick", function (e) { e.preventDefault(); }, { passive: false });
+    document.body.addEventListener("touchstart", function (e) {
+      if (e.touches && e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+    document.body.addEventListener("touchmove", function (e) {
+      if (e.touches && e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+  }
+  window.onload = function () {
+    mediaCheck();
+    clock();
+    $('#navibar').css('bottom', 0.03 * window.innerHeight);
+    stuanime();
+    let scrrat = screen.width / screen.height;
+    if (scrrat > 0.6) {
+      $('#uapps').css("top", -100 * (1 - scrrat) + document.querySelector('#hstatus').getBoundingClientRect().height + document.querySelector('#apps').getBoundingClientRect().height);
+      $('.appswrap').css("gap", "0 8vw");
+      $('.appswrap').css("padding", "2vw 4vw 0 4vw");
+      $('#uapps').css("padding", "0 4vw 0 4vw");
+      $('.appdsc').css("padding", "0.5vw 0 1vw 0");
+    } else {
+      $('#uapps').css("top", 50 * (1 - scrrat) + document.querySelector('#hstatus').getBoundingClientRect().height + document.querySelector('#apps').getBoundingClientRect().height);
+    }
+
+    wrapper = $id("appclocki");
+    canvas = $id("clockapp");
+    g = canvas.getContext("2d");
+    canvas.width = wrapper.offsetWidth;
+    canvas.height = wrapper.offsetHeight;
+    center.x = canvas.width / 2;
+    center.y = canvas.height / 2;
+    clock_size = canvas.width >= canvas.height ? canvas.height : canvas.width;
+    scale = 0.75;
+    clockdisp();
+    document.getElementById("docktwitter").onclick = function () {
+      window.location.href = "https://twitter.com/_mkybtw";
+    };
+    document.getElementById("dockyoutube").onclick = function () {
+      window.location.href = "https://www.youtube.com/channel/UCYBNOjwD9DXRW_9gsuF2sNg";
+    };
+    document.getElementById("dockgithub").onclick = function () {
+      window.open("https://github.com/mkybdev", '_blank');
+    };
+    document.getElementById("crediturl").onclick = function () {
+      window.open("https://sumaran.net/wallpaper441986/", '_blank');
+    };
+    document.getElementById("apphatenai").onclick = function () {
+      window.location.href = "https://mrthursday-misc.hatenablog.com";
+    };
+    document.getElementById("appspotifyi").onclick = function () {
+      window.location.href = "https://open.spotify.com/playlist/7oUugHTuAcpob0bRzvp9Oy?si=119f7bccd7664afa";
+    };
+    document.getElementById("appamazoni").onclick = function () {
+      window.location.href = "https://www.amazon.jp/hz/wishlist/ls/GYR2X8RWVJVY?ref_=wl_share";
+    };
+    document.getElementById("appmaili").onclick = function () {
+      window.location.href = "mailto:contact@mkybdev.com";
+    };
+    document.getElementById("popfolderappcrbrps").onclick = function () {
+      window.location.href = "https://mkybdev.com/crbrps";
+    };
+    //document.getElementById("popfolderworks").onclick = popup(0);
+    //document.getElementById("popfolderblog").onclick = popup(1);
+  }
+</script>
+
+</html>
