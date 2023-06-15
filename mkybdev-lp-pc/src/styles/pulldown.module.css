@@ -1,0 +1,24 @@
+.pulldown {
+    position: absolute;
+    top: 5.25%;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 0.75%;
+    border-radius: 0.75vh;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+.pulldown p {
+    padding: 1% 5vh 1% 1vh;
+    border-radius: 0.5vh;
+    opacity: 1;
+    white-space: nowrap;
+}
+
+.pulldown p:hover {
+    color: white;
+    opacity: 0.8;
+    background-color: #2A62D9;
+}

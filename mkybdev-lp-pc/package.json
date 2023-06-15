@@ -1,0 +1,49 @@
+{
+  "name": "mkybdev-lp-pc",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/base": "^5.0.0-alpha.120",
+    "@mui/material": "^5.11.7",
+    "@next/font": "13.1.6",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "date-fns": "^2.29.3",
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6",
+    "framer-motion": "^9.0.1",
+    "image-trace-loader": "^0.1.0",
+    "imagemin-gifsicle": "^5.2.0",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-svgo": "^10.0.1",
+    "jimp": "^0.16.2",
+    "lqip-loader": "^2.1.1",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-loader-spinner": "^5.3.4",
+    "styled-components": "^5.3.6",
+    "svg-sprite-loader": "^2.0.3",
+    "typescript": "4.9.5",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "next-optimized-images": "^1.4.2",
+    "raw-loader": "^4.0.2",
+    "responsive-loader": "^3.1.2",
+    "sharp": "^0.31.3",
+    "webp-loader": "^0.4.0"
+  }
+}

@@ -1,0 +1,133 @@
+.lockformwrapper {
+    height: calc(100% - 5.4%);
+    position: relative;
+}
+
+.notification {
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 2vh;
+    backdrop-filter: blur(10px);
+    display: flex;
+    position: absolute;
+    top: 1vw;
+    right: -50vw;
+    padding: 1vw;
+    filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.3));
+}
+
+.noticon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconpic {
+    border-radius: 50%;
+    width: 7.5vh;
+    aspect-ratio: 1/1;
+}
+
+.not {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    white-space: nowrap;
+    margin: 0 0.75vw;
+}
+
+.title p {
+    /*font-family: 'sf';*/
+    font-weight: bold;
+    font-size: 85%;
+}
+
+.content p {
+    /*font-family: 'sf';*/
+    font-weight: normal;
+    font-size: 85%;
+}
+
+.nottime {
+    font-weight: normal;
+    font-size: 80%;
+    opacity: 0.5;
+}
+
+.inner {
+    position: absolute;
+    top: calc(50% - 5.4%);
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 40%;
+    margin-bottom: 1vh;
+}
+
+.pass {
+    margin-top: 1vh;
+    position: relative;
+    display: inline-block;
+}
+
+.passwd {
+    width: max(12.5vw, 22.5vh);
+    height: max(1.25vw, 2.25vh);
+    font-size: 90%;
+    padding: 1vh max(1.25vw, 2vh);
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: max(1.25vw, 2vh);
+    caret-color: white;
+    font-family: Verdana;
+    letter-spacing: 0.1em;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.passwd:focus {
+    outline: none;
+}
+
+.passwd::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.pass .passbtn {
+    position: absolute;
+    right: 0.5vw;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    font-size: 150%;
+    color: rgba(255, 255, 255, 0.7);
+    visibility: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
