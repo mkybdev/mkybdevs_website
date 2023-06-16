@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "mkybdevswebsite"
-  }
+  },
+  "targets": {
+    "mkybdevswebsite": {
+      "hosting": {
+        "pc": [
+          "mkybdevswebsite"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

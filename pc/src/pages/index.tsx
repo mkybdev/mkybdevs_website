@@ -53,7 +53,7 @@ export default function Home() {
     const mediaCheck = () => {
       let ua = window.navigator.userAgent;
       if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 || ua.indexOf('iPad') > 0){
-        location.href = "https://mkybdev.com/sp/sp.html"
+        location.href = "https://mkybdevswebsite-sp.web.app/"
       }
     }
 
